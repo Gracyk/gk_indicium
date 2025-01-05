@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: productmodel
+        description: "Tabela contendo informações detalhadas sobre os modelos de produtos no sistema AdventureWorks."
+        columns:
+          - name: productmodelid
+            description: "ID único do modelo do produto."
+            tests:
+              - unique
+              - not_null               
+          - name: name
+            description: "Nome do modelo do produto."
+          - name: catalogdescription
+            description: "Descrição do catálogo do produto."
+          - name: instructions
+            description: "Instruções relacionadas ao produto."
+          - name: rowguid
+            description: "Identificador único da linha."
+            tests:
+              - unique
+              - not_null               
+          - name: modifieddate
+            description: "Data da última modificação no registro do modelo de produto."

@@ -1,0 +1,45 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: employee
+        description: "Tabela contendo informações sobre os funcionários da empresa, incluindo dados pessoais, status de emprego, e cargo."
+        columns:
+          - name: businessentityid
+            description: "Identificador único do funcionário."
+            tests:
+              - unique
+              - not_null
+          - name: nationalidnumber
+            description: "Número de identificação nacional do funcionário."
+          - name: loginid
+            description: "ID de login do funcionário."
+          - name: jobtitle
+            description: "Cargo do funcionário."
+          - name: birthdate
+            description: "Data de nascimento do funcionário."
+          - name: maritalstatus
+            description: "Estado civil do funcionário."
+          - name: gender
+            description: "Gênero do funcionário."
+          - name: hiredate
+            description: "Data de contratação."
+          - name: salariedflag
+            description: "Indica se o funcionário é assalariado."
+          - name: vacationhours
+            description: "Horas de férias disponíveis."
+          - name: sickleavehours
+            description: "Horas de licença médica disponíveis."
+          - name: currentflag
+            description: "Indica se o funcionário está ativo."
+          - name: rowguid
+            description: "Identificador único da linha."
+            tests:
+              - unique
+              - not_null   
+          - name: modifieddate
+            description: "Data da última modificação no registro."
+          - name: organizationnode
+            description: "Nó da organização do funcionário."

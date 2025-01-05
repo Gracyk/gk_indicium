@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: int_specialoffer  
+    description: "Modelo que consolida informações sobre ofertas especiais."
+    columns:
+      - name: special_offer_id
+        description: "ID único da oferta especial."
+        tests:
+          - not_null
+      - name: description
+        description: "Descrição da oferta especial."
+      - name: discount_pct
+        description: "Percentual de desconto aplicado na oferta."
+        tests:
+          - not_null
+      - name: offer_type
+        description: "Tipo da oferta, como promocional ou sazonal."
+      - name: category
+        description: "Categoria da oferta, classificando o tipo de desconto."
+      - name: start_date
+        description: "Data de início da oferta especial."
+        tests:
+          - not_null
+      - name: end_date
+        description: "Data de término da oferta especial."
+      - name: min_qty
+        description: "Quantidade mínima de itens necessária para aplicar a oferta."
+      - name: max_qty
+        description: "Quantidade máxima de itens aplicável na oferta."
+
+sources:
+  - name: stg_specialoffer
+    description: "Tabela de estágio que contém dados brutos de ofertas especiais."

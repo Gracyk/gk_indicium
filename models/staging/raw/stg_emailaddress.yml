@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: emailaddress
+        description: "Tabela contendo dados de endereços de e-mail."
+        columns:
+          - name: businessentityid
+            description: "Identificador da entidade de negócios."
+            tests:
+              - not_null
+              - unique                  
+          - name: emailaddressid
+            description: "Identificador único do endereço de e-mail."
+            tests:
+              - unique
+              - not_null                  
+          - name: emailaddress
+            description: "Endereço de e-mail."
+          - name: rowguid
+            description: "Identificador único da linha."
+            tests:
+              - unique
+              - not_null
+          - name: modifieddate
+            description: "Data da última modificação no registro."

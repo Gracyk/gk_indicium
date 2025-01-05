@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: vendor
+        description: "Tabela contendo informações sobre os fornecedores no sistema AdventureWorks."
+        columns:
+          - name: businessentityid
+            description: "ID da entidade de negócios do fornecedor."
+            tests:
+              - unique
+              - not_null               
+          - name: accountnumber
+            description: "Número da conta do fornecedor."
+          - name: name
+            description: "Nome do fornecedor."
+          - name: creditrating
+            description: "Classificação de crédito do fornecedor."
+          - name: preferredvendorstatus
+            description: "Status de fornecedor preferencial."
+          - name: activeflag
+            description: "Indicador de fornecedor ativo (TRUE/FALSE)."
+          - name: purchasingwebserviceurl
+            description: "URL do serviço web de compras."
+          - name: modifieddate
+            description: "Data da última modificação."

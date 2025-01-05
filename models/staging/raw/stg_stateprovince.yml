@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: stateprovince
+        description: "Tabela contendo informações sobre estados ou províncias e suas regiões associadas."
+        columns:
+          - name: stateprovinceid
+            description: "Identificador único do estado ou província."
+            tests:
+              - not_null
+              - unique                  
+          - name: stateprovincecode
+            description: "Código do estado ou província."
+          - name: countryregioncode
+            description: "Código do país ou região."
+          - name: isonlystateprovinceflag
+            description: "Flag indicando se é o único estado/província na região."
+          - name: name
+            description: "Nome do estado ou província."
+          - name: territoryid
+            description: "Identificador da região de vendas."
+            tests:
+              - not_null                  
+          - name: rowguid
+            description: "GUID único para identificar a linha."
+            tests:
+            - not_null
+            - unique
+          - name: modifieddate
+            description: "Data da última modificação no registro."
+

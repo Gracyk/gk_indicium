@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: purchaseorderheader
+        description: "Tabela contendo informações sobre os pedidos de compra no sistema AdventureWorks."
+        columns:
+          - name: purchaseorderid
+            description: "ID único do pedido de compra."             
+          - name: revisionnumber
+            description: "Número da revisão do pedido de compra."
+          - name: status
+            description: "Status atual do pedido de compra."
+          - name: employeeid
+            description: "ID do funcionário responsável pelo pedido."
+          - name: vendorid
+            description: "ID do fornecedor associado ao pedido."
+          - name: shipmethodid
+            description: "ID do método de envio utilizado no pedido."
+          - name: orderdate
+            description: "Data em que o pedido foi feito."
+          - name: shipdate
+            description: "Data em que o pedido foi enviado."
+          - name: subtotal
+            description: "Valor subtotal do pedido antes de impostos e frete."
+          - name: taxamt
+            description: "Valor do imposto do pedido."
+          - name: freight
+            description: "Custo do frete associado ao pedido."
+          - name: modifieddate
+            description: "Data da última modificação no registro do pedido."

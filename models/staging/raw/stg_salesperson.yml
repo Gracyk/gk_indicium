@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: salesperson
+        description: "Tabela que contém os dados de vendedores, com informações de vendas, comissão, bônus, etc."
+        columns:
+          - name: businessentityid
+            description: "Identificador da entidade comercial."
+            tests:
+              - unique
+              - not_null
+          - name: territoryid
+            description: "Identificador do território."
+          - name: salesquota
+            description: "Cota de vendas."
+          - name: bonus
+            description: "Bônus."
+          - name: commissionpct
+            description: "Percentual de comissão."
+          - name: salesytd
+            description: "Vendas no ano até a data."
+          - name: saleslastyear
+            description: "Vendas do ano passado."
+          - name: rowguid
+            description: "Identificador único da linha."
+            tests:
+              - unique
+              - not_null   
+          - name: modifieddate
+            description: "Data da última modificação no registro."

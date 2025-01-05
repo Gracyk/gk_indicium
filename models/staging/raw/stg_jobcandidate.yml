@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: jobcandidate
+        description: "Tabela que contém informações sobre os candidatos a empregos."
+        columns:
+          - name: jobcandidateid
+            description: "ID do candidato."
+            tests:
+              - unique
+              - not_null               
+          - name: businessentityid
+            description: "ID da entidade de negócios."        
+          - name: resume
+            description: "Currículo."
+          - name: modifieddate
+            description: "Data da última modificação."

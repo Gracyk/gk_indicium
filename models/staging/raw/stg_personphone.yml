@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: personphone
+        description: "Tabela contendo dados de telefones de pessoas."
+        columns:
+          - name: businessentityid
+            description: "Identificador da entidade de negócios."
+            tests:
+              - not_null  
+          - name: phonenumber
+            description: "Número de telefone."
+          - name: phonenumbertypeid
+            description: "Identificador do tipo de telefone."
+            tests:
+              - not_null                  
+          - name: modifieddate
+            description: "Data da última modificação no registro."

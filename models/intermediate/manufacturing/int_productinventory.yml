@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: int_productinventory
+    description: Métricas e agregações relacionadas ao inventário de produtos, locais e ordens de trabalho.
+    columns:
+      - name: product_id
+        description: Identificador único do produto.
+      - name: location_id
+        description: Identificador único do local onde o produto está armazenado.
+      - name: shelf
+        description: Localização da prateleira do produto.
+      - name: bin
+        description: Localização do compartimento do produto.
+      - name: quantity
+        description: Quantidade de produtos no inventário.
+      - name: location_name
+        description: Nome do local.
+      - name: availability
+        description: Status de disponibilidade do local.
+      - name: work_order_id
+        description: Identificador único da ordem de trabalho.
+      - name: operation_sequence
+        description: Sequência de operações na ordem de trabalho.
+      - name: scheduled_start_date
+        description: Data de início programada para a ordem de trabalho.
+      - name: scheduled_end_date
+        description: Data de término programada para a ordem de trabalho.
+      - name: actual_start_date
+        description: Data de início real da ordem de trabalho.
+      - name: actual_end_date
+        description: Data de término real da ordem de trabalho.
+      - name: actual_resource_hours
+        description: Horas reais de recursos utilizadas na ordem de trabalho.
+      - name: planned_cost
+        description: Custo planejado para a ordem de trabalho.
+      - name: order_quantity
+        description: Quantidade de produtos ordenados na ordem de trabalho.
+      - name: scrapped_quantity
+        description: Quantidade de produtos descartados na ordem de trabalho.
+      - name: start_date
+        description: Data de início da ordem de trabalho.
+      - name: end_date
+        description: Data de término da ordem de trabalho.
+      - name: due_date
+        description: Data de vencimento da ordem de trabalho.
+      - name: scrap_reason_id
+        description: Identificador único para o motivo do descarte.
+      - name: name_scrap_reason
+        description: Nome do motivo do descarte.
+

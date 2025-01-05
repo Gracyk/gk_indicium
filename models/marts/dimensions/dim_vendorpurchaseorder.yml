@@ -1,0 +1,88 @@
+version: 2
+
+models:
+  - name: dim_vendorpurchaseorder
+    description: "Dimensão com métricas de fornecedores e seus pedidos de compras"
+    columns:
+      - name: business_entity_id
+        description: "Identificador único da entidade de negócios do fornecedor"
+      - name: account_number
+        description: "Número da conta do fornecedor"
+      - name: name_fornecedor
+        description: "Nome do fornecedor"
+      - name: credit_rating
+        description: "Classificação de crédito do fornecedor"
+      - name: preferred_vendor_status
+        description: "Status do fornecedor preferencial"
+      - name: active_flag
+        description: "Indicador de atividade do fornecedor"
+      - name: product_id
+        description: "Identificador único do produto"
+      - name: average_lead_time
+        description: "Tempo médio de entrega do produto"
+      - name: standard_price
+        description: "Preço padrão do produto"
+      - name: last_receipt_cost
+        description: "Custo do último recebimento do produto"
+      - name: last_receipt_date
+        description: "Data do último recebimento do produto"
+      - name: min_order_qty
+        description: "Quantidade mínima de pedido do produto"
+      - name: max_order_qty
+        description: "Quantidade máxima de pedido do produto"
+      - name: on_order_qty
+        description: "Quantidade em pedido do produto"
+      - name: unit_measure_code
+        description: "Código da unidade de medida do produto"
+      - name: name_measure
+        description: "Nome da unidade de medida"
+      - name: purchase_order_id
+        description: "Identificador único do pedido de compra"
+      - name: revision_number
+        description: "Número de revisão do pedido de compra"
+      - name: status
+        description: "Status do pedido de compra"
+      - name: employee_id
+        description: "Identificador do funcionário responsável pelo pedido"
+      - name: vendor_id
+        description: "Identificador do fornecedor no pedido de compra"
+      - name: ship_method_id
+        description: "Método de envio do pedido de compra"
+      - name: order_date
+        description: "Data do pedido de compra"
+      - name: ship_date
+        description: "Data de envio do pedido de compra"
+      - name: subtotal
+        description: "Subtotal do pedido de compra"
+      - name: tax_amount
+        description: "Valor do imposto no pedido de compra"
+      - name: freight
+        description: "Custo de frete do pedido de compra"
+      - name: purchase_order_detail_id
+        description: "Identificador único do detalhe do pedido de compra"
+      - name: due_date
+        description: "Data de vencimento do pedido de compra"
+      - name: order_qty
+        description: "Quantidade do pedido de compra"
+      - name: unit_price
+        description: "Preço unitário do pedido de compra"
+      - name: received_qty
+        description: "Quantidade recebida do pedido de compra"
+      - name: rejected_qty
+        description: "Quantidade rejeitada do pedido de compra"
+      - name: num_suppliers
+        description: "Número de fornecedores ativos"
+      - name: avg_lead_time
+        description: "Tempo médio de entrega dos produtos dos fornecedores"
+      - name: total_purchase_cost
+        description: "Custo total das compras"
+      - name: avg_order_qty
+        description: "Quantidade média dos pedidos de compra"
+      - name: total_received_qty
+        description: "Quantidade total recebida de pedidos de compra"
+      - name: total_receipt_cost
+        description: "Custo total do recebimento de pedidos"
+      - name: num_pending_orders
+        description: "Número de pedidos pendentes de compra"
+      - name: total_rejected_qty
+        description: "Quantidade total rejeitada de pedidos de compra"

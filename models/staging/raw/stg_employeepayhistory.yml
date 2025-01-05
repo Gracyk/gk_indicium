@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: employeepayhistory
+        description: "Tabela que contém histórico de pagamento dos funcionários."
+        columns:
+          - name: businessentityid
+            description: "ID da entidade de negócios."             
+          - name: ratechangedate
+            description: "Data de alteração da taxa."
+          - name: rate
+            description: "Taxa."
+          - name: payfrequency
+            description: "Frequência de pagamento."
+          - name: modifieddate
+            description: "Data da última modificação."

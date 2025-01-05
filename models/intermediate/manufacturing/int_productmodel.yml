@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: int_productmodel
+    description: "Modelo contendo detalhes sobre modelos de produtos, descrições e ilustrações."
+    columns:
+      - name: product_model_id
+        description: "Identificador único do modelo do produto."
+      - name: product_model_name
+        description: "Nome do modelo do produto."
+      - name: illustration_id
+        description: "Identificador único da ilustração associada ao modelo do produto."
+      - name: diagram
+        description: "Diagrama ou ilustração associada ao produto."
+      - name: culture_id
+        description: "Identificador único da cultura associada ao produto."
+      - name: culture_name
+        description: "Nome da cultura associada ao produto."
+      - name: product_description_id
+        description: "Identificador único da descrição do produto."
+      - name: product_description
+        description: "Descrição detalhada do produto."

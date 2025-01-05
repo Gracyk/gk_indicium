@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: int_salespersonhistory
+    description: "Modelo com informações de território de vendas e métricas associadas"
+    columns:
+      - name: territory_id
+        description: "Identificador único do território de vendas"
+      - name: territory_name
+        description: "Nome do território de vendas"
+      - name: country_region_code
+        description: "Código da região ou país do território"
+      - name: territory_group
+        description: "Grupo ao qual o território pertence"
+      - name: sales_ytd
+        description: "Vendas do território no ano até a data"
+      - name: sales_last_year
+        description: "Vendas do território no ano passado"
+      - name: cost_ytd
+        description: "Custo no território no ano até a data"
+      - name: cost_last_year
+        description: "Custo no território no ano passado"

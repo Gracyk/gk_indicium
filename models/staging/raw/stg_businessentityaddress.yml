@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: businessentityaddress
+        description: "Tabela associando as entidades de negócios com seus respectivos endereços."
+        columns:
+          - name: businessentityid
+            description: "Identificador único da entidade de negócios."         
+          - name: addressid
+            description: "Identificador único do endereço."
+            tests:
+              - unique
+              - not_null              
+          - name: addresstypeid
+            description: "Tipo do endereço (residencial, comercial, etc.)."
+            tests:
+              - not_null              
+          - name: rowguid
+            description: "GUID único para identificar a linha."
+            tests:
+              - unique
+              - not_null              
+          - name: modifieddate
+            description: "Data da última modificação no registro."

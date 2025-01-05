@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: int_productcosthistory
+    description: "Modelo para análise relacionadas ao histórico de custos de produtos."
+    columns:
+      - name: num_products
+        description: "Número de produtos distintos no histórico de custos."
+      - name: avg_standard_cost
+        description: "Custo padrão médio ao longo de todos os registros no histórico de custos."
+      - name: total_cost_changes
+        description: "Número total de alterações de custo registradas no histórico de produtos."
+      - name: max_standard_cost
+        description: "Custo padrão máximo registrado no histórico de custos." 
+      - name: min_standard_cost
+        description: "Custo padrão mínimo registrado no histórico de custos."
+      - name: duration_avg_days
+        description: "Duração média (em dias) entre a data de início e a data de término dos registros no histórico de custos."
+

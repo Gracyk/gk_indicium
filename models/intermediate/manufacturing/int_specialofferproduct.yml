@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: int_specialofferproduct
+    description: "Tabela contendo os detalhes dos produtos associados às ofertas especiais, incluindo o ID da oferta especial e o ID do produto."
+    columns:
+      - name: special_offer_id
+        description: "ID único da oferta especial."
+      - name: product_id
+        description: "ID do produto associado à oferta especial."
+
+  - name: stg_specialoffer
+    description: "Tabela contendo informações detalhadas sobre as ofertas especiais, incluindo o tipo de oferta, descontos e datas de validade."
+    columns:
+      - name: special_offer_id
+        description: "ID único da oferta especial."
+      - name: description
+        description: "Descrição da oferta especial."
+      - name: discount_pct
+        description: "Porcentagem de desconto oferecida na promoção."
+      - name: offer_type
+        description: "Tipo de oferta (exemplo: desconto fixo, desconto por quantidade, etc.)."
+      - name: category
+        description: "Categoria à qual a oferta especial pertence."
+      - name: start_date
+        description: "Data de início da oferta especial."
+      - name: end_date
+        description: "Data de término da oferta especial."
+      - name: min_qty
+        description: "Quantidade mínima de produtos necessária para a oferta."
+      - name: max_qty
+        description: "Quantidade máxima de produtos que pode ser adquirida dentro da oferta."
+
+  - name: special_offer_metrics
+    description: "Modelo contendo métricas agregadas sobre as ofertas especiais e produtos associados."
+    columns:
+      - name: special_offer_id
+        description: "ID único da oferta especial."
+      - name: product_id
+        description: "ID do produto associado à oferta especial."
+      - name: description
+        description: "Descrição da oferta especial."
+      - name: discount_pct
+        description: "Porcentagem de desconto oferecida na promoção."
+      - name: offer_type
+        description: "Tipo de oferta (exemplo: desconto fixo, desconto por quantidade, etc.)."
+      - name: category
+        description: "Categoria à qual a oferta especial pertence."
+      - name: start_date
+        description: "Data de início da oferta especial."
+      - name: end_date
+        description: "Data de término da oferta especial."
+      - name: min_qty
+        description: "Quantidade mínima de produtos necessária para a oferta."
+      - name: max_qty
+        description: "Quantidade máxima de produtos que pode ser adquirida dentro da oferta."
+      - name: num_products
+        description: "Número de produtos distintos associados a cada oferta especial."
+      - name: avg_discount_pct
+        description: "Porcentagem média de desconto nas ofertas especiais."
+      - name: offer_type_count
+        description: "Número de ofertas por tipo (exemplo: desconto fixo, desconto por quantidade, etc.)."
+      - name: avg_min_qty
+        description: "Quantidade mínima média de produtos necessária para a oferta."
+      - name: avg_max_qty
+        description: "Quantidade máxima média de produtos permitida por oferta."

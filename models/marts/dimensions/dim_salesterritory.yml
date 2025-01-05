@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_salesterritory
+    description: "Dimensão que armazena informações sobre territórios de vendas."
+    columns:
+      - name: territory_id
+        description: "Identificador único do território."
+      - name: territory_name
+        description: "Nome do território."
+      - name: country_region_code
+        description: "Código da região ou país associado ao território."
+      - name: territory_group
+        description: "Grupo ao qual o território pertence."
+      - name: sales_ytd
+        description: "Vendas acumuladas no ano até a data."
+      - name: sales_last_year
+        description: "Vendas realizadas no ano anterior."
+      - name: cost_ytd
+        description: "Custo acumulado no ano até a data."
+      - name: cost_last_year
+        description: "Custo realizado no ano anterior."

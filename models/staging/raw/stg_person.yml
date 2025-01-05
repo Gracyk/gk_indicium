@@ -1,0 +1,41 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: person
+        description: "Tabela contendo informações detalhadas sobre as pessoas, incluindo dados pessoais e de contato."
+        columns:
+          - name: businessentityid
+            description: "Identificador único da pessoa."
+            tests:
+              - unique
+              - not_null
+          - name: persontype
+            description: "Tipo de pessoa (por exemplo, funcionário, cliente)."
+          - name: namestyle
+            description: "Estilo de nome (Primeiro nome, Sobrenome, etc.)."
+          - name: title
+            description: "Título (ex: Sr., Sra., Dr., etc.)."
+          - name: firstname
+            description: "Primeiro nome da pessoa."
+          - name: middlename
+            description: "Nome do meio da pessoa."
+          - name: lastname
+            description: "Sobrenome da pessoa."
+          - name: suffix
+            description: "Sufixo (ex: Jr., II, III, etc.)."
+          - name: emailpromotion
+            description: "Indica se a pessoa recebe promoções por e-mail."
+          - name: additionalcontactinfo
+            description: "Informações de contato adicionais."
+          - name: demographics
+            description: "Dados demográficos da pessoa."
+          - name: rowguid
+            description: "Identificador único da linha."
+            tests:
+              - not_null
+              - unique
+          - name: modifieddate
+            description: "Data da última modificação no registro."

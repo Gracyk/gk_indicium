@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: specialofferproduct
+        description: "Tabela que contém os produtos associados às ofertas especiais."
+        columns:
+          - name: specialofferid
+            description: "ID da oferta especial."
+            tests:
+             - not_null               
+          - name: productid
+            description: "ID do produto."
+          - name: rowguid
+            description: "GUID da linha."
+            tests:
+              - unique
+              - not_null               
+          - name: modifieddate
+            description: "Data da última modificação."

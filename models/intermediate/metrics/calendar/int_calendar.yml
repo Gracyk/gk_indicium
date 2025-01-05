@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: calendario
+    description: "Gera uma tabela de datas com várias colunas de informações sobre o calendário"
+    columns:
+      - name: data_key
+        description: "Chave de data no formato YYYYMMDD"
+      - name: data
+        description: "Data formatada como tipo DATE"
+      - name: data_tntz
+        description: "Data com fuso horário"
+      - name: ano
+        description: "Ano da data"
+      - name: mes
+        description: "Mês da data"
+      - name: nome_mes
+        description: "Nome do mês"
+      - name: trimestre
+        description: "Trimestre do ano (1, 2, 3, 4)"
+      - name: dia
+        description: "Dia do mês"
+      - name: dia_da_semana
+        description: "Dia da semana (0=domingo, 6=sábado)"
+      - name: nome_dia_semana
+        description: "Nome do dia da semana"
+      - name: semana_ano
+        description: "Número da semana no ano"
+      - name: final_semana
+        description: "Indica se é final de semana (true para sábado e domingo)"
+
+  

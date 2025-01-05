@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: int_currencyrate
+    description: 'Tabela intermediária que agrega informações de taxas de câmbio e suas métricas relacionadas.'
+    columns:
+      - name: currency_rate_id
+        description: 'Identificador único para a taxa de câmbio.'
+      - name: currency_code
+        description: "Código único da moeda no formato ISO (3 letras)."  
+      - name: from_currency_code
+        description: 'Código da moeda de origem.'
+      - name: to_currency_code
+        description: 'Código da moeda de destino.'
+      - name: average_rate
+        description: 'Taxa média de câmbio entre as moedas durante o período.'
+      - name: end_of_day_rate
+        description: 'Taxa de câmbio no fechamento do dia.'
+      - name: name_currency
+        description: 'Nome da moeda de origem.'
+      - name: average_rate_currency
+        description: 'Taxa média de câmbio calculada para a moeda.'
+      - name: closing_rate_currency
+        description: 'Taxa de fechamento calculada para a moeda.'
+      - name: difference_closing_average_rate
+        description: 'Diferença entre a taxa de fechamento e a taxa média.'
+      - name: exchange_rate_volatility
+        description: 'Medição da volatilidade nas taxas de câmbio.'
+      - name: rates_variation
+        description: 'Variação entre as taxas médias e de fechamento.'
+      - name: volume_registered_fees
+        description: 'Volume de taxas registradas durante o período.'

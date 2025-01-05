@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: billofmaterials
+        description: "Tabela que armazena as listas de materiais para produtos montados."
+        columns:
+          - name: "billofmaterialsid"
+            description: "ID da lista de materiais."
+          - name: "productassemblyid"
+            description: "ID do produto montado."
+          - name: "componentid"
+            description: "ID do componente."
+          - name: "startdate"
+            description: "Data de início."
+          - name: "enddate"
+            description: "Data de término."
+          - name: "unitmeasurecode"
+            description: "Código da unidade de medida."
+          - name: "bomlevel"
+            description: "Nível da lista de materiais."
+          - name: "perassemblyqty"
+            description: "Quantidade por montagem."
+          - name: "modifieddate"
+            description: "Data da última modificação."

@@ -1,0 +1,91 @@
+version: 2
+
+models:
+  - name: int_salesperson
+    description: "Tabela que consolida métricas de vendas, territórios, e informações de funcionários."
+    columns:
+      - name: business_entity_id
+        description: "Identificador único da entidade de negócios."
+        tests:
+          - not_null
+          - unique
+      - name: territory_id
+        description: "Identificador do território ao qual as vendas estão associadas."
+        tests:
+          - relationships:
+              to: ref('stg_salesterritory')
+              field: territory_id
+      - name: sales_quota
+        description: "Meta de vendas atribuída a cada vendedor."
+      - name: bonus
+        description: "Valor de bônus recebido pelo vendedor."
+      - name: commission_pct
+        description: "Porcentagem de comissão atribuída ao vendedor."
+      - name: sales_ytd
+        description: "Vendas acumuladas no ano até a data atual (Year-To-Date)."
+        tests:
+          - not_null
+      - name: sales_last_year
+        description: "Vendas acumuladas no ano anterior."
+      - name: territory_name
+        description: "Nome do território associado às vendas."
+      - name: country_region_code
+        description: "Código do país ou região do território."
+      - name: territory_group
+        description: "Grupo ou região ao qual o território pertence."
+      - name: sales_person_ytd_territory
+        description: "Total de vendas acumuladas no território no ano até a data."
+      - name: sales_person_last_year_territory
+        description: "Total de vendas no território no ano anterior."
+      - name: cost_ytd
+        description: "Custo acumulado no ano até a data."
+      - name: cost_last_year
+        description: "Custo acumulado no ano anterior."
+      - name: national_id_number
+        description: "Número de identificação nacional do vendedor."
+      - name: job_title
+        description: "Cargo do vendedor."
+      - name: birth_date
+        description: "Data de nascimento do vendedor."
+      - name: gender
+        description: "Gênero do vendedor."
+      - name: hire_date
+        description: "Data de contratação do vendedor."
+      - name: salaried_flag
+        description: "Indica se o vendedor é assalariado (true/false)."
+      - name: vacation_hours
+        description: "Número de horas de férias disponíveis para o vendedor."
+      - name: sick_leave_hours
+        description: "Número de horas de licença médica disponíveis para o vendedor."
+      - name: current_flag
+        description: "Indica se o vendedor está atualmente ativo (true/false)."
+      - name: person_type
+        description: "Tipo de pessoa associado ao vendedor (ex: funcionário, contratante)."
+      - name: name_person_sales
+        description: "Nome completo do vendedor."
+      - name: number_quota_realized
+        description: "Percentual da meta de vendas atingido pelo vendedor."
+      - name: target_quota
+        description: "Indicador se o vendedor atingiu ou não a meta de vendas."
+      - name: commission_value
+        description: "Valor da comissão baseado nas vendas acumuladas."
+      - name: sales_growth
+        description: "Percentual de crescimento de vendas em comparação ao ano anterior."
+      - name: profit_margin
+        description: "Margem de lucro com base nas vendas e custos acumulados."
+      - name: cost_per_sale
+        description: "Custo por venda."
+      - name: sales_per_hour
+        description: "Vendas acumuladas divididas pelas horas de férias disponíveis."
+      - name: sales_retention_rate
+        description: "Taxa de retenção de vendas em relação ao ano anterior."
+      - name: cac_per_sale
+        description: "Custo de aquisição de cliente (CAC) por venda."
+      - name: territory_sales_performance
+        description: "Desempenho de vendas em relação ao total de vendas do território."
+      - name: territory_sales_growth
+        description: "Crescimento de vendas do território em relação ao ano anterior."
+      - name: sales_to_cost_ratio
+        description: "Razão entre vendas e custos acumulados."
+      - name: sales_per_role
+        description: "Vendas por função ou cargo do vendedor."

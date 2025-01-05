@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim_creditcard
+    description: "Dimensão que relaciona cartões de crédito com informações de pessoas."
+    columns:
+      - name: credit_card_id
+        description: "Identificador único para o cartão de crédito."
+      - name: card_type
+        description: "Tipo do cartão de crédito (ex.: Visa, MasterCard)."
+      - name: expiration_month
+        description: "Mês de expiração do cartão de crédito."
+      - name: expiration_year
+        description: "Ano de expiração do cartão de crédito."
+      - name: business_entity_person_id
+        description: "Identificador único da pessoa associada ao cartão de crédito."
+

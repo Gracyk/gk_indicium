@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: sim_transactionhistory
+    description: "Modelo para análise de transações e custos associados."
+    columns:
+      - name: product_id
+        description: "Identificador único do produto."
+      - name: product_name
+        description: "Nome do produto."
+      - name: product_number
+        description: "Número do produto."
+      - name: reference_order_id
+        description: "Identificador da ordem de referência."
+      - name: reference_order_line_id
+        description: "Identificador da linha de ordem de referência."
+      - name: transaction_type
+        description: "Tipo de transação associada ao produto."
+      - name: quantity
+        description: "Quantidade transacionada."
+      - name: actual_cost
+        description: "Custo real associado à transação."
+      - name: total_transactions
+        description: "Número total de transações realizadas."
+      - name: total_cost
+        description: "Custo total de todas as transações."
+      - name: average_cost
+        description: "Custo médio por transação."
+      - name: total_quantity
+        description: "Quantidade total transacionada."
+      - name: average_cost_per_product
+        description: "Custo médio por produto transacionado."
+      - name: total_transactions_order
+        description: "Número total de transações por ordem."

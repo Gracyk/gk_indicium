@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: department
+        description: "Tabela que contém os departamentos dos funcionários."
+        columns:
+          - name: departmentid
+            description: "ID do departamento."
+            tests:
+              - unique
+              - not_null                  
+          - name: name
+            description: "Nome do departamento."
+            tests:
+              - not_null              
+          - name: groupname
+            description: "Grupo do tdepartamentourno."
+            tests:
+              - not_null  
+          - name: modifieddate
+            description: "Data da última modificação."

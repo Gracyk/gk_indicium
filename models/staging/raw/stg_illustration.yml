@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: illustration
+        description: "Tabela contendo informações sobre ilustrações no sistema AdventureWorks, incluindo diagramas."
+        columns:
+          - name: illustrationid
+            description: "ID único da ilustração."
+            tests:
+              - unique
+              - not_null               
+          - name: diagram
+            description: "Representação do diagrama associado à ilustração."
+          - name: modifieddate
+            description: "Data da última modificação no registro da ilustração."

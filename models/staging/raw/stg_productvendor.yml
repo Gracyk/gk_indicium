@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: productvendor
+        description: "Tabela contendo informações sobre fornecedores de produtos no sistema AdventureWorks."
+        columns:
+          - name: productid
+            description: "ID do produto."              
+          - name: businessentityid
+            description: "ID da entidade de negócios do fornecedor."
+          - name: averageleadtime
+            description: "Tempo médio de entrega do produto."
+          - name: standardprice
+            description: "Preço padrão do produto."
+          - name: lastreceiptcost
+            description: "Custo da última recepção do produto."
+          - name: lastreceiptdate
+            description: "Data da última recepção do produto."
+          - name: minorderqty
+            description: "Quantidade mínima de pedido do produto."
+          - name: maxorderqty
+            description: "Quantidade máxima de pedido do produto."
+          - name: onorderqty
+            description: "Quantidade do produto em pedido."
+          - name: unitmeasurecode
+            description: "Código da unidade de medida do produto."
+          - name: modifieddate
+            description: "Data da última modificação dos dados do fornecedor do produto."

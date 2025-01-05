@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: unitmeasure
+        description: "Tabela contendo informações sobre as unidades de medida no sistema AdventureWorks."
+        columns:
+          - name: unitmeasurecode
+            description: "Código da unidade de medida."
+            tests:
+              - unique
+              - not_null               
+          - name: name
+            description: "Nome da unidade de medida."
+          - name: modifieddate
+            description: "Data da última modificação dos dados da unidade de medida."

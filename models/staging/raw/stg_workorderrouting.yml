@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: workorderrouting
+        description: "Tabela que armazena informações sobre o roteamento da ordem de trabalho."
+        columns:
+          - name: workorderid
+            description: "ID da ordem de trabalho."            
+          - name: productid
+            description: "ID do produto."
+          - name: operationsequence
+            description: "Sequência da operação."
+          - name: locationid
+            description: "ID da localização."
+          - name: scheduledstartdate
+            description: "Data de início programada."
+          - name: scheduledenddate
+            description: "Data de término programada."
+          - name: actualstartdate
+            description: "Data de início real."
+          - name: actualenddate
+            description: "Data de término real."
+          - name: actualresourcehrs
+            description: "Horas de recurso reais."
+          - name: plannedcost
+            description: "Custo planejado."
+          - name: actualcost
+            description: "Custo real."
+          - name: modifieddate
+            description: "Data da última modificação."

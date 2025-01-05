@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: businessentity
+        description: "Tabela contendo as entidades de negócios registradas no sistema." 
+        columns:
+          - name: businessentityid
+            description: "Identificador único da entidade de negócios."
+            tests:
+            - unique
+            - not_null 
+          - name: rowguid
+            description: "GUID único para identificar a linha."
+            tests:
+              - unique
+              - not_null              
+          - name: modifieddate
+            description: "Data da última modificação no registro."

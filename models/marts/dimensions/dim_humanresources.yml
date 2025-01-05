@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: dim_humanresources
+    description: "Dimensão com informações de funcionários e métricas agregadas"
+    columns:
+      - name: business_entity_id
+        description: "Identificador único da entidade de negócios"
+      - name: national_id_number
+        description: "Número de identificação nacional do funcionário"
+      - name: job_title
+        description: "Título do cargo"
+      - name: birth_date
+        description: "Data de nascimento"
+      - name: gender
+        description: "Gênero do funcionário"
+      - name: salaried_flag
+        description: "Indica se o funcionário é assalariado"
+      - name: vacation_hours
+        description: "Horas de férias acumuladas"
+      - name: sick_leave_hours
+        description: "Horas de licença médica acumuladas"
+      - name: current_flag
+        description: "Indica se o funcionário está ativo"
+      - name: job_candidate_id
+        description: "Identificador do candidato a emprego"
+      - name: rate_change_date
+        description: "Data de alteração da taxa salarial"
+      - name: rate
+        description: "Taxa salarial"
+      - name: pay_frequency
+        description: "Frequência de pagamento"
+      - name: department_id
+        description: "Identificador do departamento"
+      - name: shift_id
+        description: "Identificador do turno"
+      - name: start_date
+        description: "Data de início no departamento/turno"
+      - name: end_date
+        description: "Data de término no departamento/turno"
+      - name: name_shift
+        description: "Nome do turno"
+      - name: start_time
+        description: "Hora de início do turno"
+      - name: name_department
+        description: "Nome do departamento"
+      - name: group_name
+        description: "Nome do grupo do departamento"
+      - name: num_employees
+        description: "Número de empregados por departamento/turno"
+      - name: avg_salary
+        description: "Média salarial por departamento"
+      - name: total_vacation_hours
+        description: "Total de horas de férias acumuladas"
+      - name: total_sick_leave_hours
+        description: "Total de horas de licença médica acumuladas"
+      - name: num_current_flag
+        description: "Número de empregados ativos e inativos"
+      - name: avg_age
+        description: "Idade média dos funcionários por departamento"
+      - name: num_employees_gender
+        description: "Número de empregados por gênero"
+

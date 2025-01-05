@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: businessentitycontact
+        description: "Tabela associando pessoas a tipos de contato para entidades de negócios."
+        columns:
+          - name: businessentityid
+            description: "Identificador da entidade de negócios." 
+          - name: personid
+            description: "Identificador da pessoa associada à entidade."
+            tests:
+              - not_null
+              - unique                  
+          - name: contacttypeid
+            description: "Identificador do tipo de contato."
+            tests:
+              - not_null
+          - name: rowguid
+            description: "Identificador único da linha."
+            tests:
+              - not_null
+              - unique                  
+          - name: modifieddate
+            description: "Data da última modificação no registro."

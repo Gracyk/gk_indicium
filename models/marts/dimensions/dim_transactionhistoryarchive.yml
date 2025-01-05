@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: dim_transactionhistoryarchive
+    description: "Modelo que consolida dados de produtos e histórico de transações arquivadas."
+    columns:
+      - name: product_id
+        description: "Identificador único do produto."
+        tests:
+          - not_null
+
+      - name: product_name
+        description: "Nome do produto."
+
+      - name: product_number
+        description: "Número do produto usado para identificá-lo."
+
+      - name: reference_order_id_tha
+        description: "ID de referência do pedido no histórico de transações arquivadas."
+
+      - name: reference_order_line_id_tha
+        description: "ID da linha de pedido associada à referência de transação."
+
+      - name: transaction_type_tha
+        description: "Tipo de transação registrada no histórico de transações arquivadas."
+
+      - name: quantity_tha
+        description: "Quantidade de itens envolvidos na transação."
+
+      - name: actual_cost_tha
+        description: "Custo real da transação arquivada."
+
+      - name: num_products_tha
+        description: "Número total de produtos registrados no histórico."
+
+      - name: number_transaction_type_tha
+        description: "Número de tipos de transação diferentes registrados."
+
+      - name: avg_actual_cost_tha
+        description: "Custo médio calculado para as transações arquivadas."
+
+      - name: total_actual_cost_tha
+        description: "Custo total acumulado das transações arquivadas."
+
+      - name: max_actual_cost_tha
+        description: "Maior custo real registrado em uma transação."
+
+      - name: min_actual_cost_tha
+        description: "Menor custo real registrado em uma transação."

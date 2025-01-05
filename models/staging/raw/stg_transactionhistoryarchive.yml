@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: transactionhistoryarchive
+        description: "Tabela de histórico de transações arquivadas."
+        columns:
+          - name: transactionid
+            description: "ID da transação."
+            tests:
+              - unique
+              - not_null               
+          - name: productid
+            description: "ID do produto."
+          - name: referenceorderid
+            description: "ID do pedido de referência."
+          - name: referenceorderlineid
+            description: "ID da linha do pedido de referência."
+          - name: transactiondate
+            description: "Data da transação."
+          - name: transactiontype
+            description: "Tipo de transação."
+          - name: quantity
+            description: "Quantidade."
+          - name: actualcost
+            description: "Custo real."
+          - name: modifieddate
+            description: "Data da última modificação."

@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim_salesreason
+    description: "Dimensão que armazena informações relacionadas aos motivos de venda."
+    columns:
+      - name: name
+        description: "Nome do motivo ou categoria."
+      - name: sales_order_id
+        description: "Identificador único para o pedido de venda."
+      - name: sales_reason_id
+        description: "Identificador único para o motivo da venda."
+      - name: name_sales_reason
+        description: "Descrição do motivo da venda."
+      - name: reason_type
+        description: "Tipo de motivo associado à venda, como 'Manufacturer' ou 'Quality'."
+

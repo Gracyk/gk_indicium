@@ -1,0 +1,65 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: product
+        description: "Tabela contendo informações detalhadas sobre os produtos no sistema AdventureWorks."
+        columns:
+          - name: productid
+            description: "ID único do produto."
+            tests:
+              - unique
+              - not_null               
+          - name: name
+            description: "Nome do produto."
+          - name: productnumber
+            description: "Número único do produto."
+          - name: makeflag
+            description: "Indicador de fabricação do produto (se é fabricado ou adquirido)."
+          - name: finishedgoodsflag
+            description: "Indicador se o produto é um bem acabado."
+          - name: color
+            description: "Cor do produto."
+          - name: safetystocklevel
+            description: "Nível de estoque de segurança do produto."
+          - name: reorderpoint
+            description: "Ponto de reabastecimento do produto."
+          - name: standardcost
+            description: "Custo padrão do produto."
+          - name: listprice
+            description: "Preço de lista do produto."
+          - name: size
+            description: "Tamanho do produto."
+          - name: sizeunitmeasurecode
+            description: "Código da unidade de medida para o tamanho."
+          - name: weightunitmeasurecode
+            description: "Código da unidade de medida para o peso."
+          - name: weight
+            description: "Peso do produto."
+          - name: daystomanufacture
+            description: "Número de dias necessários para fabricar o produto."
+          - name: productline
+            description: "Linha do produto."
+          - name: class
+            description: "Classe do produto."
+          - name: style
+            description: "Estilo do produto."
+          - name: productsubcategoryid
+            description: "ID da subcategoria do produto."
+          - name: productmodelid
+            description: "ID do modelo do produto."
+          - name: sellstartdate
+            description: "Data de início da venda do produto."
+          - name: sellenddate
+            description: "Data de término da venda do produto."
+          - name: discontinueddate
+            description: "Data de descontinuação do produto."
+          - name: rowguid
+            description: "Identificador único da linha."
+            tests:
+              - unique
+              - not_null               
+          - name: modifieddate
+            description: "Data da última modificação no registro do produto."
