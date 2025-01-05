@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: salesreason
+        description: "Tabela que contém os motivos de venda."
+        columns:
+          - name: salesreasonid
+            description: "ID do motivo de venda."
+            tests:
+              - not_null                  
+          - name: name
+            description: "Nome do motivo de venda."
+          - name: reasontype
+            description: "Tipo de motivo de venda."
+          - name: modifieddate
+            description: "Data da última modificação."

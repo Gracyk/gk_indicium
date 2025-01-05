@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: currency
+        description: "Tabela que armazena informações sobre as moedas utilizadas na organização."
+        columns:
+          - name: currencycode
+            description: "Código único da moeda no formato ISO (3 letras)."
+            tests:
+              - unique
+              - not_null
+          - name: name
+            description: "Nome da moeda."
+            tests:
+              - not_null
+          - name: modifieddate
+            description: "Data da última modificação no registro."

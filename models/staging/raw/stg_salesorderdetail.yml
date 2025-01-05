@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: salesorderdetail
+        description: "Tabela que contém os detalhes dos pedidos de venda."
+        columns:
+          - name: salesorderid
+            description: "ID do pedido de venda."
+            tests:
+             - not_null                            
+          - name: salesorderdetailid
+            description: "ID do detalhe do pedido de venda."
+            tests:
+              - unique
+              - not_null              
+          - name: carriertrackingnumber
+            description: "Número de rastreamento da transportadora."
+          - name: orderqty
+            description: "Quantidade do pedido."
+          - name: productid
+            description: "ID do produto."
+          - name: specialofferid
+            description: "ID da oferta especial."
+          - name: unitprice
+            description: "Preço unitário."
+          - name: unitpricediscount
+            description: "Desconto sobre o preço unitário."
+          - name: rowguid
+            description: "GUID da linha."
+            tests:
+              - unique
+              - not_null              
+          - name: modifieddate
+            description: "Data da última modificação."

@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: productinventory
+        description: "Tabela que armazena informações de inventário de produtos."
+        columns:
+          - name: productid
+            description: "ID do produto."              
+          - name: locationid
+            description: "ID da localização do estoque."
+          - name: shelf
+            description: "Estante onde o produto está armazenado."
+          - name: bin
+            description: "Bin (compartimento) onde o produto está armazenado."
+          - name: quantity
+            description: "Quantidade do produto no estoque."
+          - name: rowguid
+            description: "Identificador único da linha."
+            tests:
+              - unique
+              - not_null               
+          - name: modifieddate
+            description: "Data da última modificação no inventário do produto."

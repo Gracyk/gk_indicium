@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_shipmethod
+    description: Dimensão que Contém informações sobre os métodos de envio, incluindo suas taxas base e variáveis. Essa tabela é útil para análise de custos logísticos e escolha do método mais eficiente.
+    columns:
+      - name: ship_method_id
+        description: Identificador único do método de envio.
+      - name: ship_method_name
+        description: Nome descritivo do método de envio.
+      - name: ship_base
+        description: Custo fixo associado ao método de envio.
+      - name: ship_rate
+        description: Taxa variável do método de envio.

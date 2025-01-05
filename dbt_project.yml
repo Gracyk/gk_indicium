@@ -1,0 +1,44 @@
+# Nome do projeto
+name: 'cea_aw_gracykoliveira'
+version: '1.0.0'
+config-version: 2
+
+# Configuração do profile
+profile: 'default'
+
+# Configuração dos caminhos
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+# Caminho do target
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Configuração para organizar schemas de forma hierárquica
+models:
+  cea_aw_gracykoliveira:
+    # Configuração padrão
+    +schema: "{{ var('main_schema', 'adventureworks') }}"  # Schema principal, padrão "adventureworks"
+    
+    # Subesquemas dinâmicos para organização por hierarquia
+    staging:
+      +schema: "{{ var('main_schema', 'adventureworks') }}_staging"  # Exemplo: adventureworks_staging
+      +materialized: table
+      
+    dimensions:
+      +schema: "{{ var('main_schema', 'adventureworks') }}_dimensions"  # Exemplo: adventureworks_dimensions
+      +materialized: table
+
+    factos:
+      +schema: "{{ var('main_schema', 'adventureworks') }}_factos"  # Exemplo: adventureworks_factos
+      +materialized: table
+
+    intermediate:
+      +schema: "{{ var('main_schema', 'adventureworks') }}_intermediate"  # Exemplo: adventureworks_intermediate
+      +materialized: table

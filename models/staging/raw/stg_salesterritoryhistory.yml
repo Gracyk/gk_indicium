@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: salesterritoryhistory
+        description: "Tabela contendo histórico de associações de entidades de negócios a territórios de vendas."
+        columns:
+          - name: businessentityid
+            description: "Identificador da entidade de negócios."
+            tests:
+              - not_null
+          - name: territoryid
+            description: "Identificador do território."
+            tests:
+              - not_null
+          - name: startdate
+            description: "Data de início da associação ao território."
+          - name: enddate
+            description: "Data de término da associação ao território."
+          - name: rowguid
+            description: "Identificador único da linha."
+            tests:
+              - unique
+          - name: modifieddate
+            description: "Data da última modificação no registro."

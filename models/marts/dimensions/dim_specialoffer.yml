@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: dim_specialoffer  
+    description: "Dimensão que consolida informações sobre ofertas especiais."
+    columns:
+      - name: special_offer_id
+        description: "ID único da oferta especial."
+      - name: description
+        description: "Descrição da oferta especial."
+      - name: discount_pct
+        description: "Percentual de desconto aplicado na oferta."
+      - name: offer_type
+        description: "Tipo da oferta, como promocional ou sazonal."
+      - name: category
+        description: "Categoria da oferta, classificando o tipo de desconto."
+      - name: start_date
+        description: "Data de início da oferta especial."
+      - name: end_date
+        description: "Data de término da oferta especial."
+      - name: min_qty
+        description: "Quantidade mínima de itens necessária para aplicar a oferta."
+      - name: max_qty
+        description: "Quantidade máxima de itens aplicável na oferta."

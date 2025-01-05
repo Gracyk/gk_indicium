@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: contacttype
+        description: "Tabela contendo os diferentes tipos de contato disponíveis no sistema."
+        columns:
+          - name: contacttypeid
+            description: "Identificador único do tipo de contato."
+            tests:
+              - not_null
+              - unique 
+          - name: name
+            description: "Nome do tipo de contato."
+          - name: modifieddate
+            description: "Data da última modificação no registro."

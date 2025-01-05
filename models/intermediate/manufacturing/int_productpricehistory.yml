@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: int_productpricehistory
+    description: "Tabela contendo o histórico de preços de lista dos produtos, incluindo a data de início e fim e o preço do produto."
+    columns:
+      - name: product_id
+        description: "ID do produto."
+      - name: start_date
+        description: "Data de início do preço listado para o produto."
+      - name: end_date
+        description: "Data de término do preço listado para o produto."
+      - name: list_price
+        description: "Preço listado do produto."
+      - name: number_price_entries
+        description: "Número total de entradas de preço registradas para cada produto."
+      - name: average_price
+        description: "Preço médio listado para cada produto."
+      - name: total_price
+        description: "Preço total acumulado para cada produto, somando todas as entradas de preços."
+      - name: price_range
+        description: "Diferença entre o preço máximo e o mínimo registrado para cada produto."
+      - name: price_change_count
+        description: "Número de vezes que o preço do produto foi alterado."

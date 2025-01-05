@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: int_transactionhistoryarchive
+    description: "Tabela contendo o histórico arquivado de transações, com informações sobre produtos, transações, quantidades e custos."
+    columns:
+      - name: transaction_id
+        description: "ID único da transação."
+      - name: product_id
+        description: "ID do produto transacionado."
+      - name: reference_order_id
+        description: "ID da ordem de referência associada à transação."
+      - name: reference_order_line_id
+        description: "ID da linha da ordem de referência associada à transação."
+      - name: transaction_date
+        description: "Data da transação."
+      - name: transaction_type
+        description: "Tipo de transação (compra, venda, etc.)."
+      - name: quantity
+        description: "Quantidade do produto transacionado."
+      - name: actual_cost
+        description: "Custo real do produto na transação."
+
+  - name: transaction_metrics_archive
+    description: "Modelo contendo métricas agregadas sobre o histórico de transações arquivadas."
+    columns:
+      - name: product_id
+        description: "ID do produto transacionado."
+      - name: num_products
+        description: "Número de produtos distintos em transações."
+      - name: number_transaction_type
+        description: "Número total de transações por tipo de transação."
+      - name: avg_actual_cost
+        description: "Custo médio real das transações."
+      - name: number_actual_cost
+        description: "Número de registros de custo real nas transações."
+      - name: total_actual_cost
+        description: "Custo total real das transações."
+      - name: max_actual_cost
+        description: "Custo máximo registrado para o produto nas transações."
+      - name: min_actual_cost
+        description: "Custo mínimo registrado para o produto nas transações."

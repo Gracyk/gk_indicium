@@ -1,0 +1,131 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: "Fato consolidado para análise de vendas, incluindo informações sobre pedidos, clientes, entrega, vendedores e métricas relacionadas."
+    columns:
+      # 1. Informações do Pedido
+      - name: order_id
+        description: "Identificador único para cada pedido."
+        tests:
+          - not_null
+
+      - name: order_date
+        description: "Data em que o pedido foi realizado."
+        tests:
+          - not_null
+
+      - name: order_month
+        description: "Mês de realização do pedido."
+
+      - name: order_year
+        description: "Ano de realização do pedido."
+
+      - name: order_status
+        description: "Status atual do pedido (exemplo: finalizado, pendente)."
+
+      # 2. Detalhes de Itens do Pedido
+      - name: product_id
+        description: "Identificador único do produto."
+        tests:
+          - relationships:
+              to: ref('dim_product')
+              field: product_id
+
+      - name: product_name
+        description: "Nome do produto vendido."
+
+      - name: unit_price
+        description: "Preço unitário do produto no pedido."
+
+      - name: quantity_purchased
+        description: "Quantidade comprada do produto no pedido."
+
+      # 3. Informações do Cliente
+      - name: customer_id
+        description: "Identificador único do cliente."
+        tests:
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_id
+
+      - name: name_customer
+        description: "Nome completo do cliente."
+
+      # 4. Informações da Loja
+      - name: store_id
+        description: "Identificador único da loja associada ao pedido." 
+
+      - name: name_store
+        description: "Nome da loja associada ao pedido."
+
+      # 5. Dados de Vendas
+      - name: total_value_negotiated
+        description: "Valor total negociado do pedido, considerando descontos e impostos."
+        tests:
+          - not_null
+
+      - name: gross_revenue
+        description: "Receita bruta gerada pelo pedido."
+
+      # 6. Informações de Entrega
+      - name: ship_method_name
+        description: "Nome do método de envio utilizado no pedido."
+
+      - name: city
+        description: "Cidade para onde o pedido foi enviado."
+
+      # 7. Métodos e Operações
+      - name: credit_card_id
+        description: "Identificador único do cartão de crédito utilizado na transação."
+        tests:
+          - relationships:
+              to: ref('dim_creditcard')
+              field: credit_card_id
+
+      - name: currency_code
+        description: "Código da moeda utilizada na transação."
+
+      # 8. Vendedor e Região
+      - name: salesperson_id
+        description: "Identificador único do vendedor associado ao pedido."
+
+      - name: territory_name
+        description: "Nome do território de vendas associado ao pedido."
+
+      # 9. Métricas e Contagens
+      - name: number_orders
+        description: "Número total de pedidos realizados."
+        tests:
+          - not_null
+
+      # 10. Endereços
+      - name: shipping_address_id
+        description: "Identificador único do endereço de envio associado ao pedido."
+
+      - name: name_country_region_ship
+        description: "Nome do país/região para onde o pedido foi enviado."
+
+sources:
+  - name: fact_aggregatedsales
+    description: "Tabela de fato agregada contendo dados brutos de vendas."
+  - name: dim_creditcard
+    description: "Dimensão contendo informações sobre cartões de crédito."
+  - name: dim_customer
+    description: "Dimensão contendo informações sobre clientes."
+  - name: dim_salesreason
+    description: "Dimensão contendo motivos de vendas associados aos pedidos."
+  - name: dim_salesterritory
+    description: "Dimensão contendo informações sobre territórios de vendas."
+  - name: dim_address
+    description: "Dimensão contendo informações de endereços de envio e cobrança."
+  - name: dim_shipmethod
+    description: "Dimensão contendo métodos de envio associados aos pedidos."
+  - name: dim_salesperson
+    description: "Dimensão contendo informações sobre vendedores associados aos pedidos."
+  - name: dim_currencyrate
+    description: "Dimensão contendo informações sobre taxas de câmbio."
+  - name: dim_specialoffer
+    description: "Dimensão contendo informações sobre ofertas especiais."
+  - name: dim_product
+    description: "Dimensão contendo informações sobre produtos."

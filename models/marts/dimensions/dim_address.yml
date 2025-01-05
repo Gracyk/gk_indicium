@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dim_address
+    description: "Dimensão contendo informações detalhadas sobre endereços, incluindo localização geográfica e tipo de endereço."
+    columns:
+      - name: address_id
+        description: "Identificador único do endereço."
+      - name: address_line_1
+        description: "Primeira linha do endereço, geralmente o número e o nome da rua."
+      - name: address_line_2
+        description: "Segunda linha do endereço, usada para informações adicionais como apartamento ou unidade."
+      - name: city
+        description: "Nome da cidade associada ao endereço."
+      - name: state_province_id
+        description: "Identificador do estado ou província associado ao endereço."
+      - name: state_province_code
+        description: "Código do estado ou província associado ao endereço."
+      - name: country_region_code
+        description: "Código do país ou região associado ao endereço."
+      - name: name_state_province
+        description: "Nome do estado ou província associado ao endereço."
+      - name: territory_id
+        description: "Identificador do território associado ao endereço."
+      - name: name_country_region
+        description: "Nome do país ou região associado ao endereço."
+      - name: business_entity_id
+        description: "Identificador da entidade comercial associada ao endereço."
+      - name: address_type_id
+        description: "Identificador do tipo de endereço (residencial, comercial, etc.)."
+      - name: name_address_type
+        description: "Descrição do tipo de endereço associado."

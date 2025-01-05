@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: shipmethod
+        description: "Tabela contendo informações sobre os métodos de envio no sistema AdventureWorks."
+        columns:
+          - name: shipmethodid
+            description: "ID do método de envio."
+            tests:
+              - unique
+              - not_null               
+          - name: name
+            description: "Nome do método de envio."
+          - name: shipbase
+            description: "Taxa base de envio associada ao método."
+          - name: shiprate
+            description: "Taxa de envio por unidade associada ao método."
+          - name: rowguid
+            description: "Identificador único da linha para o método de envio."
+            tests:
+              - unique
+              - not_null               
+          - name: modifieddate
+            description: "Data da última modificação no registro do método de envio."

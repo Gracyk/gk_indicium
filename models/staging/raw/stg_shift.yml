@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: shift
+        description: "Tabela que contém os turnos de trabalho."
+        columns:
+          - name: shiftid
+            description: "ID do turno."
+            tests:
+              - unique
+              - not_null               
+          - name: name
+            description: "Nome do turno."
+          - name: starttime
+            description: "Hora de início do turno."
+          - name: endtime
+            description: "Hora de término do turno."
+          - name: modifieddate
+            description: "Data da última modificação."

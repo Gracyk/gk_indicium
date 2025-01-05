@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "Dimensão contendo informações de clientes, incluindo dados pessoais, de contato e relacionados a endereços."
+    columns:
+      - name: customer_id
+        description: "Identificador único do cliente."
+      - name: person_id
+        description: "Identificador da pessoa associada ao cliente."
+      - name: store_id
+        description: "Identificador da loja associada ao cliente."
+      - name: territory_id
+        description: "Identificador do território associado ao cliente."
+      - name: title
+        description: "Título ou pronome de cortesia do cliente (Sr., Sra., etc.)."
+      - name: name_customer
+        description: "Nome completo do cliente."
+      - name: suffix
+        description: "Sufixo do nome do cliente, se aplicável (Jr., Sr., etc.)."
+      - name: email_promotion
+        description: "Indica se o cliente está inscrito para promoções via e-mail."
+      - name: email_address_id
+        description: "Identificador do endereço de e-mail do cliente."
+      - name: email_address
+        description: "Endereço de e-mail do cliente."
+      - name: phone_number
+        description: "Número de telefone do cliente."
+      - name: phone_number_type_id
+        description: "Identificador do tipo de número de telefone (celular, fixo, etc.)."
+      - name: name_type_number
+        description: "Descrição do tipo de número de telefone."
+      - name: contact_type_id
+        description: "Identificador do tipo de contato associado ao cliente."
+      - name: name_contact_type
+        description: "Nome do tipo de contato associado ao cliente."
+      - name: business_entity_id
+        description: "Identificador da entidade comercial relacionada ao cliente."
+      - name: address_id
+        description: "Identificador do endereço do cliente."
+      - name: address_type_id
+        description: "Identificador do tipo de endereço (residencial, comercial, etc.)."

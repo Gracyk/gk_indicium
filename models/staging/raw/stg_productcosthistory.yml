@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: productcosthistory
+        description: "Tabela que armazena o histórico de custos dos produtos."
+        columns:
+          - name: productid
+            description: "ID do produto."
+            tests:
+              - not_null               
+          - name: startdate
+            description: "Data de início do custo do produto."
+          - name: enddate
+            description: "Data de término do custo do produto."
+          - name: standardcost
+            description: "Custo padrão do produto."
+          - name: modifieddate
+            description: "Data da última modificação no histórico de custos."

@@ -1,0 +1,144 @@
+version: 2
+
+models:
+  - name: fact_aggregatedsales
+    description: "Fato Agregada contendo informações sobre pedidos de vendas, incluindo detalhes do cabeçalho e itens do pedido."
+    columns:
+      - name: order_id
+        description: "Identificador único do pedido." 
+      - name: revision_number
+        description: "Número de revisão do pedido, usado para indicar alterações em um pedido."
+      - name: order_date
+        description: "Data em que o pedido foi realizado."
+      - name: due_date
+        description: "Data prevista para o vencimento ou entrega do pedido."
+      - name: ship_date
+        description: "Data em que o pedido foi enviado."
+      - name: order_status
+        description: "Status atual do pedido (ex: em processamento, enviado, cancelado)."
+      - name: is_online_order
+        description: "Indica se o pedido foi realizado online (true) ou de outra forma (false)."
+      - name: purchase_order_number
+        description: "Número do pedido de compra associado ao pedido de vendas."
+      - name: account_number
+        description: "Número da conta associada ao cliente que fez o pedido."
+      - name: customer_id
+        description: "Identificador único do cliente associado ao pedido."       
+      - name: salesperson_id
+        description: "Identificador do vendedor responsável pelo pedido."
+      - name: territory_id
+        description: "Identificador do território associado ao pedido."       
+      - name: billing_address_id
+        description: "Identificador do endereço de cobrança associado ao pedido."
+      - name: shipping_address_id
+        description: "Identificador do endereço de entrega associado ao pedido."
+      - name: shipping_method_id
+        description: "Identificador do método de envio utilizado para o pedido."
+      - name: credit_card_id
+        description: "Identificador do cartão de crédito usado para pagar o pedido."      
+      - name: credit_card_approval_code
+        description: "Código de aprovação da transação de cartão de crédito."
+      - name: currency_rate_id
+        description: "Identificador da taxa de câmbio aplicada ao pedido, se aplicável."
+      - name: subtotal_amount
+        description: "Valor subtotal do pedido, antes de impostos e descontos."
+      - name: tax_amount
+        description: "Valor dos impostos aplicados ao pedido."
+      - name: total_due
+        description: "Valor total devido pelo cliente, incluindo impostos e outros encargos."
+      - name: sales_order_detail_id
+        description: "Identificador único do detalhe do pedido de venda."
+      - name: carrier_tracking_number
+        description: "Número de rastreamento fornecido pelo transportador para o envio do pedido."
+      - name: order_qty
+        description: "Quantidade do produto ou serviço solicitado no pedido."
+      - name: product_id
+        description: "Identificador do produto ou serviço incluído no pedido."        
+      - name: special_offer_id
+        description: "Identificador da oferta especial associada ao produto no pedido."
+      - name: unit_price
+        description: "Preço unitário do produto ou serviço no pedido."
+      - name: unit_price_discount
+        description: "Desconto aplicado ao preço unitário do produto ou serviço no pedido."
+      - name: number_special_offer
+        description: "Quantidade de ofertas especiais aplicadas ao pedido."
+      - name: number_order_status
+        description: "Quantidade status aplicadas ao pedido."
+      - name: number_shipping_method
+        description: "Quantidade de métodos de envio diferentes utilizados."
+      - name: number_salesperson_id
+        description: "Quantidade de vendedores envolvidos nos pedidos."
+      - name: number_territory_id
+        description: "Quantidade de territórios diferentes relacionados aos pedidos."
+      - name: order_year
+        description: "Ano em que o pedido foi realizado."
+      - name: order_month
+        description: "Mês em que o pedido foi realizado."
+      - name: number_orders
+        description: "Número total de pedidos realizados no período."
+      - name: quantity_purchased
+        description: "Quantidade total de itens comprados."
+      - name: total_value_negotiated
+        description: "Valor total negociado bruto nos pedidos."
+      - name: total_net_traded_value
+        description: "Valor total negociado líquido nos pedidos."
+      - name: total_tax_amount
+        description: "Total de impostos aplicados nos pedidos."
+      - name: number_currency_rate_id
+        description: "Número total de taxas de câmbio aplicadas."
+      - name: on_time_deliveries
+        description: "Número de entregas realizadas dentro do prazo."
+      - name: late_deliveries
+        description: "Número de entregas realizadas fora do prazo."
+      - name: total_deliveries
+        description: "Número total de entregas realizadas."
+      - name: percentage_of_deliveries_on_time
+        description: "Percentual de entregas realizadas dentro do prazo."
+      - name: percentage_late_deliveries
+        description: "Percentual de entregas realizadas fora do prazo."
+      - name: had_discount
+        description: "Indica se o pedido teve descontos aplicados."
+      - name: total_value_amount
+        description: "Valor total bruto dos pedidos."
+      - name: online_sales
+        description: "Quantidade de vendas realizadas online."
+      - name: offline_sales
+        description: "Quantidade de vendas realizadas offline."
+      - name: gross_revenue
+        description: "Receita bruta gerada pelos pedidos."
+      - name: product_discounts
+        description: "Descontos aplicados aos produtos nos pedidos."
+      - name: ticket_medium
+        description: "Valor médio negociado por pedido."
+      - name: number_sales_card_type
+        description: "Quantidade de tipos de cartão usados nas vendas."
+      - name: card_type
+        description: "Tipo de cartão utilizado no pedido."
+      - name: number_sales_reason
+        description: "Quantidade de razões de venda associadas aos pedidos."
+      - name: name_sales_reason
+        description: "Nome das razões de venda associadas aos pedidos."
+      - name: number_reason_type
+        description: "Quantidade de tipos de razões de venda nos pedidos."
+      - name: reason_type
+        description: "Tipo de razão associado ao pedido."
+      - name: name_customer
+        description: "Nome do cliente associado ao pedido."
+      - name: store_id
+        description: "Identificador da loja associada ao pedido."
+      - name: number_store_id
+        description: "Quantidade de lojas envolvidas nos pedidos."
+      - name: territory_name
+        description: "Nome do território associado ao pedido."
+      - name: country_region_code
+        description: "Código da região ou país associado ao pedido."
+      - name: territory_group
+        description: "Grupo de territórios relacionado ao pedido."
+      - name: sales_ytd
+        description: "Vendas acumuladas no ano até a data."
+      - name: sales_last_year
+        description: "Vendas realizadas no ano anterior."
+      - name: cost_ytd
+        description: "Custos acumulados no ano até a data."
+      - name: cost_last_year
+        description: "Custos incorridos no ano anterior."

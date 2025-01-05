@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: location
+        description: "Tabela que armazena informações sobre as localizações."
+        columns:
+          - name: "locationid"
+            description: "ID da localização."           
+          - name: "name"
+            description: "Nome da localização."
+          - name: "costrate"
+            description: "Taxa de custo da localização."
+          - name: "availability"
+            description: "Disponibilidade da localização."
+          - name: "modifieddate"
+            description: "Data da última modificação da localização."

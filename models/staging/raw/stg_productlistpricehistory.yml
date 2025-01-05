@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: productlistpricehistory
+        description: "Tabela que armazena o histórico de preços de lista dos produtos."
+        columns:
+          - name: productid
+            description: "ID do produto."
+            tests:
+              - not_null               
+          - name: startdate
+            description: "Data de início."
+          - name: enddate
+            description: "Data de término."
+          - name: listprice
+            description: "Preço de lista."
+          - name: modifieddate
+            description: "Data da última modificação."

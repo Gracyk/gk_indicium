@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: phonenumbertype
+        description: "Tabela contendo tipos de telefone."
+        columns:
+          - name: phonenumbertypeid
+            description: "Identificador do tipo de telefone."
+            tests:
+              - not_null
+              - unique                  
+          - name: name
+            description: "Nome do tipo de telefone."
+          - name: modifieddate
+            description: "Data da última modificação no registro."

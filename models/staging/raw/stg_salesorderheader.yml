@@ -1,0 +1,66 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    tables:
+      - name: salesorderheader
+        description: "Cabecalho dos pedidos de venda"
+        columns:
+          - name: salesorderid
+            description: "ID único do pedido de venda (Primary Key)"
+            tests:
+              - unique
+              - not_null
+          - name: revisionnumber
+            description: "Número da revisão do pedido"
+          - name: orderdate
+            description: "Data do pedido"
+          - name: duedate
+            description: "Data prevista para conclusão"
+          - name: shipdate
+            description: "Data de envio"
+          - name: status
+            description: "Status do pedido"
+          - name: onlineorderflag
+            description: "Indicador de pedido online"
+          - name: purchaseordernumber
+            description: "Número do pedido de compra"
+          - name: accountnumber
+            description: "Número da conta associada ao pedido"
+          - name: customerid
+            description: "ID do cliente que fez o pedido"
+          - name: salespersonid
+            description: "ID do vendedor associado ao pedido"
+          - name: territoryid
+            description: "ID do território de vendas"
+          - name: billtoaddressid
+            description: "ID do endereço de cobrança"
+          - name: shiptoaddressid
+            description: "ID do endereço de envio"
+          - name: shipmethodid
+            description: "ID do método de envio"
+          - name: creditcardid
+            description: "ID do cartão de crédito usado no pagamento"
+          - name: creditcardapprovalcode
+            description: "Código de aprovação do cartão de crédito"
+          - name: currencyrateid
+            description: "ID da taxa de câmbio usada"
+          - name: subtotal
+            description: "Subtotal do pedido"
+          - name: taxamt
+            description: "Valor do imposto aplicado ao pedido"
+          - name: freight
+            description: "Valor do frete do pedido"
+          - name: totaldue
+            description: "Valor total devido"
+          - name: comment
+            description: "Comentários sobre o pedido"
+          - name: rowguid
+            description: "GUID exclusivo da linha"
+            tests:
+              - unique
+              - not_null            
+          - name: modifieddate
+            description: "Data da última modificação"
+          
+

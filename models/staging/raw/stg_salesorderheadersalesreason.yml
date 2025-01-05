@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: salesorderheadersalesreason
+        description: "Tabela de associação entre o pedido de venda e os motivos de venda."
+        columns:
+          - name: salesorderid
+            description: "ID do pedido de venda."
+            tests:
+              - not_null              
+          - name: salesreasonid
+            description: "ID do motivo da venda."
+            tests:
+              - not_null              
+          - name: modifieddate
+            description: "Data da última modificação."

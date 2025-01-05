@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: address
+        description: "Tabela contendo informações sobre os endereços dos clientes e entidades de negócios."
+        columns:
+          - name: addressid
+            description: "Identificador único do endereço."
+            tests:
+              - unique
+              - not_null            
+          - name: addressline1
+            description: "Primeira linha do endereço."
+          - name: addressline2
+            description: "Segunda linha do endereço."
+          - name: city
+            description: "Cidade do endereço."
+          - name: stateprovinceid
+            description: "Identificador do estado ou província."
+            tests:
+              - not_null  
+          - name: postalcode
+            description: "Código postal do endereço."
+          - name: spatiallocation
+            description: "Localização geoespacial do endereço."
+          - name: rowguid
+            description: "GUID único para identificar a linha."
+            tests:
+              - unique
+              - not_null 
+          - name: modifieddate
+            description: "Data da última modificação no registro."

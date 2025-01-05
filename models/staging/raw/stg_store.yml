@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: store
+        description: "Tabela contendo informações das lojas no sistema AdventureWorks."
+        columns:
+          - name: businessentityid
+            description: "Identificador único da entidade de negócios."
+            tests:
+              - unique
+              - not_null
+          - name: name
+            description: "Nome da loja."
+            tests:
+              - not_null
+          - name: salespersonid
+            description: "Identificador do vendedor associado."
+          - name: demographics
+            description: "Informações demográficas associadas à loja."
+          - name: rowguid
+            description: "Identificador global único da linha."
+            tests:
+              - unique
+              - not_null
+          - name: modifieddate
+            description: "Data da última modificação no registro."
+

@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: scrapreason
+        description: "Tabela que armazena informações sobre motivos de descarte."
+        columns:
+          - name: scrapreasonid
+            description: "ID do motivo do descarte."
+            tests:
+              - unique
+              - not_null               
+          - name: name
+            description: "Nome do motivo do descarte."
+          - name: modifieddate
+            description: "Data da última modificação."

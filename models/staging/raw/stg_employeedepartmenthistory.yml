@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: employeedepartmenthistory
+        description: "Tabela que contém o histórico de departamentos dos funcionários."
+        columns:
+          - name: businessentityid
+            description: "ID da entidade de negócios."               
+          - name: departmentid
+            description: "ID do departamento."            
+          - name: shiftid
+            description: "ID do turno."          
+          - name: startdate
+            description: "Data de início."
+          - name: enddate
+            description: "Data de término."
+          - name: modifieddate
+            description: "Data da última modificação."

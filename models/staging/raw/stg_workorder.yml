@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: workorder
+        description: "Tabela que armazena informações sobre ordens de trabalho."
+        columns:
+          - name: workorderid
+            description: "ID da ordem de trabalho."
+            tests:
+              - unique
+              - not_null               
+          - name: productid
+            description: "ID do produto."
+          - name: orderqty
+            description: "Quantidade do pedido."
+          - name: scrappedqty
+            description: "Quantidade descartada."
+          - name: startdate
+            description: "Data de início."
+          - name: enddate
+            description: "Data de término."
+          - name: duedate
+            description: "Data de vencimento."
+          - name: scrapreasonid
+            description: "ID do motivo do descarte."
+          - name: modifieddate
+            description: "Data da última modificação."

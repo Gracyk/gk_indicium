@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: creditcard
+        description: "Tabela que armazena informações sobre cartões de crédito utilizados por clientes."
+        columns:
+          - name: creditcardid
+            description: "Identificador único do cartão de crédito."
+            tests:
+              - unique
+              - not_null
+          - name: cardtype
+            description: "Tipo do cartão de crédito (ex: Visa, Mastercard)."
+            tests:
+              - not_null
+          - name: cardnumber
+            description: "Número do cartão de crédito."
+          - name: expmonth
+            description: "Mês de expiração do cartão."
+          - name: expyear
+            description: "Ano de expiração do cartão."
+          - name: modifieddate
+            description: "Data da última modificação no registro."

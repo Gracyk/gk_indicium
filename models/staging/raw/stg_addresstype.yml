@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: addresstype
+        description: "Tabela contendo os tipos de endereço (residencial, comercial, etc.) no sistema AdventureWorks."
+        columns:
+          - name: addresstypeid
+            description: "ID do tipo de endereço."
+            tests:
+              - unique
+              - not_null 
+          - name: name
+            description: "Nome do tipo de endereço (ex: residencial, comercial)."
+          - name: rowguid
+            description: "Identificador único global."
+            tests:
+              - unique
+              - not_null             
+          - name: modifieddate
+            description: "Data da última modificação no registro."

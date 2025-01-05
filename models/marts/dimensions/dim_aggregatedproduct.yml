@@ -1,0 +1,192 @@
+version: 2
+
+models:
+  - name: dim_aggregatedproduct
+    description: "Modelo para análise abrangente de produtos e métricas relacionadas."
+    columns:
+      - name: product_id
+        description: "Identificador único do produto."
+      - name: product_name
+        description: "Nome do produto."
+      - name: product_number
+        description: "Número do produto."
+      - name: start_date_pch
+        description: "Data de início do período considerado para análise de custo padrão."
+      - name: end_date_pch
+        description: "Data de término do período considerado para análise de custo padrão."
+      - name: standard_cost
+        description: "Custo padrão associado ao produto."
+      - name: num_products_pch
+        description: "Número de produtos no período considerado."
+      - name: avg_standard_cost
+        description: "Custo padrão médio dos produtos no período considerado."
+      - name: total_cost_changes
+        description: "Número total de mudanças de custo padrão no período."
+      - name: max_standard_cost
+        description: "Custo padrão máximo registrado no período."
+      - name: min_standard_cost
+        description: "Custo padrão mínimo registrado no período."
+      - name: duration_avg_days
+        description: "Duração média (em dias) das operações relacionadas ao produto."
+      - name: shelf
+        description: "Prateleira onde o produto está armazenado."
+      - name: bin
+        description: "Identificação do compartimento de armazenamento do produto."
+      - name: quantity
+        description: "Quantidade disponível do produto."
+      - name: location_name
+        description: "Nome do local onde o produto está armazenado."
+      - name: availability
+        description: "Disponibilidade do produto para venda."
+      - name: operation_sequence
+        description: "Sequência operacional associada à produção ou manipulação do produto."
+      - name: scheduled_start_date
+        description: "Data de início programada para operações relacionadas ao produto."
+      - name: scheduled_end_date
+        description: "Data de término programada para operações relacionadas ao produto."
+      - name: actual_start_date
+        description: "Data real de início das operações."
+      - name: actual_end_date
+        description: "Data real de término das operações."
+      - name: actual_resource_hours
+        description: "Horas reais de recursos utilizadas nas operações."
+      - name: planned_cost
+        description: "Custo planejado das operações relacionadas ao produto."
+      - name: order_quantity
+        description: "Quantidade solicitada nos pedidos relacionados ao produto."
+      - name: start_date_pi
+        description: "Data de início do período considerado para inspeção de produtos."
+      - name: end_date_pi
+        description: "Data de término do período considerado para inspeção de produtos."
+      - name: due_date
+        description: "Data de vencimento para entrega do produto."
+      - name: name_scrap_reason
+        description: "Motivo para sucateamento do produto."
+      - name: num_products_pi
+        description: "Número de produtos inspecionados no período."
+      - name: total_quantity_prod_iven
+        description: "Quantidade total de produtos inventariados."
+      - name: avg_quantity_per_location
+        description: "Quantidade média de produtos por local de armazenamento."
+      - name: num_work_orders
+        description: "Número total de ordens de trabalho relacionadas ao produto."
+      - name: avg_order_quantity
+        description: "Quantidade média por ordem de trabalho."
+      - name: total_scrapped_quantity
+        description: "Quantidade total de produtos sucateados."
+      - name: scrap_rate
+        description: "Taxa de sucateamento do produto."
+      - name: avg_planned_cost
+        description: "Custo planejado médio por operação."
+      - name: avg_actual_resource_hours
+        description: "Média de horas reais de recursos utilizadas."
+      - name: avg_order_duration
+        description: "Duração média de ordens de trabalho."
+      - name: product_model_name
+        description: "Nome do modelo do produto."
+      - name: culture_name
+        description: "Nome da cultura associada ao produto (caso aplicável)."
+      - name: product_description
+        description: "Descrição do produto."
+      - name: start_date_pph
+        description: "Data de início para histórico de preços."
+      - name: end_date_pph
+        description: "Data de término para histórico de preços."
+      - name: list_price
+        description: "Preço de lista do produto."
+      - name: number_price_entries
+        description: "Número de entradas de preços no histórico."
+      - name: average_price
+        description: "Preço médio no histórico."
+      - name: total_price
+        description: "Preço total registrado no histórico."
+      - name: price_range
+        description: "Intervalo de preços no histórico."
+      - name: price_change_count
+        description: "Número de mudanças de preço registradas."
+      - name: description_sop
+        description: "Descrição da oferta especial."
+      - name: discount_pct_sop
+        description: "Porcentagem de desconto na oferta especial."
+      - name: offer_type_sop
+        description: "Tipo de oferta especial."
+      - name: category_sop
+        description: "Categoria da oferta especial."
+      - name: start_date_sop
+        description: "Data de início da oferta especial."
+      - name: end_date_sop
+        description: "Data de término da oferta especial."
+      - name: min_qty
+        description: "Quantidade mínima exigida para oferta."
+      - name: max_qty
+        description: "Quantidade máxima aplicável na oferta."
+      - name: num_products_sop
+        description: "Número de produtos associados à oferta especial."
+      - name: avg_discount_pct
+        description: "Média de desconto aplicado nas ofertas."
+      - name: offer_type_count
+        description: "Número de tipos de ofertas associadas."
+      - name: avg_max_qty
+        description: "Quantidade máxima média por oferta."
+      - name: avg_min_qty
+        description: "Quantidade mínima média por oferta."
+      - name: name_fornecedor
+        description: "Nome do fornecedor."
+      - name: credit_rating
+        description: "Classificação de crédito do fornecedor."
+      - name: preferred_vendor_status
+        description: "Status do fornecedor preferencial."
+      - name: active_flag
+        description: "Indicador de status ativo do fornecedor."
+      - name: average_lead_time
+        description: "Tempo médio de entrega do fornecedor."
+      - name: last_receipt_cost
+        description: "Custo do último recebimento."
+      - name: last_receipt_date
+        description: "Data do último recebimento."
+      - name: max_order_qty_vpo
+        description: "Quantidade máxima por pedido de compra."
+      - name: min_order_qty_vpo
+        description: "Quantidade mínima por pedido de compra."
+      - name: unit_measure_code
+        description: "Código da unidade de medida."
+      - name: name_measure
+        description: "Nome da unidade de medida."
+      - name: revision_number
+        description: "Número de revisão."
+      - name: status
+        description: "Status atual do pedido."
+      - name: order_date
+        description: "Data do pedido."
+      - name: ship_date
+        description: "Data de envio."
+      - name: subtotal
+        description: "Subtotal do pedido."
+      - name: tax_amount
+        description: "Valor total de impostos aplicados ao pedido."
+      - name: freight
+        description: "Custo de frete."
+      - name: order_qty
+        description: "Quantidade de itens no pedido."
+      - name: unit_price
+        description: "Preço unitário de cada item no pedido."
+      - name: received_qty
+        description: "Quantidade recebida."
+      - name: rejected_qty
+        description: "Quantidade rejeitada."
+      - name: num_suppliers
+        description: "Número de fornecedores associados."
+      - name: avg_lead_time
+        description: "Tempo médio de entrega."
+      - name: total_purchase_cost
+        description: "Custo total de compras realizadas."
+      - name: avg_order_qty
+        description: "Quantidade média por pedido."
+      - name: total_received_qty
+        description: "Quantidade total recebida."
+      - name: total_receipt_cost
+        description: "Custo total de itens recebidos."
+      - name: num_pending_orders
+        description: "Número de pedidos pendentes."
+      - name: total_rejected_qty
+        description: "Quantidade total rejeitada nos pedidos."

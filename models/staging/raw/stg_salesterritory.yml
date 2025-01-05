@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: salesterritory
+        description: "Tabela que contém os dados de territórios de vendas, com informações sobre vendas, custos, etc."
+        columns:
+          - name: territoryid
+            description: "Identificador do território."
+            tests:
+              - unique
+              - not_null
+          - name: name
+            description: "Nome do território."
+          - name: countryregioncode
+            description: "Código do país ou região."
+          - name: group
+            description: "Grupo do território."
+          - name: salesytd
+            description: "Vendas no ano até a data."
+          - name: saleslastyear
+            description: "Vendas do ano passado."
+          - name: costytd
+            description: "Custo no ano até a data."
+          - name: costlastyear
+            description: "Custo do ano passado."
+          - name: rowguid
+            description: "Identificador único da linha."
+            tests:
+              - unique
+              - not_null   
+          - name: modifieddate
+            description: "Data da última modificação no registro."

@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: specialoffer
+        description: "Tabela que contém informações sobre as ofertas especiais."
+        columns:
+          - name: specialofferid
+            description: "ID da oferta especial."             
+          - name: description
+            description: "Descrição da oferta especial."
+          - name: discountpct
+            description: "Percentual de desconto."
+          - name: type
+            description: "Tipo da oferta."
+          - name: category
+            description: "Categoria da oferta."
+          - name: startdate
+            description: "Data de início da oferta."
+          - name: enddate
+            description: "Data de término da oferta."
+          - name: minqty
+            description: "Quantidade mínima para a oferta."
+          - name: maxqty
+            description: "Quantidade máxima para a oferta."
+          - name: rowguid
+            description: "GUID da linha."
+          - name: modifieddate
+            description: "Data da última modificação."

@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: purchaseorderdetail
+        description: "Tabela contendo os detalhes dos pedidos de compra no sistema AdventureWorks."
+        columns:
+          - name: purchaseorderid
+            description: "ID único do pedido de compra."           
+          - name: purchaseorderdetailid
+            description: "ID único do detalhe do pedido de compra."
+          - name: duedate
+            description: "Data de vencimento do pedido de compra."
+          - name: orderqty
+            description: "Quantidade do pedido de compra."
+          - name: productid
+            description: "ID do produto associado ao pedido de compra."
+          - name: unitprice
+            description: "Preço unitário do produto no pedido."
+          - name: receivedqty
+            description: "Quantidade do produto recebida."
+          - name: rejectedqty
+            description: "Quantidade do produto rejeitada."
+          - name: modifieddate
+            description: "Data da última modificação no detalhe do pedido de compra."

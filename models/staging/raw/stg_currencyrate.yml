@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    tables:
+      - name: currencyrate
+        description: "Tabela que armazena informações sobre taxas de câmbio entre diferentes moedas."
+        columns:
+          - name: currencyrateid
+            description: "Identificador único da taxa de câmbio."
+            tests:
+              - unique
+              - not_null
+          - name: currencyratedate
+            description: "Data em que a taxa de câmbio foi registrada."
+            tests:
+              - not_null
+          - name: fromcurrencycode
+            description: "Código da moeda de origem (formato ISO de 3 letras)."
+          - name: tocurrencycode
+            description: "Código da moeda de destino (formato ISO de 3 letras)."
+          - name: averagerate
+            description: "Taxa média de câmbio registrada no período."
+          - name: endofdayrate
+            description: "Taxa de câmbio registrada no final do dia."
+          - name: modifieddate
+            description: "Data da última modificação no registro."

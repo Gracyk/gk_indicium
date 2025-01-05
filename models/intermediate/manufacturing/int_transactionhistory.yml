@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: int_transactionhistory
+    description: "Tabela intermediária contendo o histórico de transações com informações sobre produtos, transações e custos."
+    columns:
+      - name: transaction_id
+        description: "ID único da transação."
+      - name: product_id
+        description: "ID do produto transacionado."
+      - name: reference_order_id
+        description: "ID da ordem de referência associada à transação."
+      - name: reference_order_line_id
+        description: "ID da linha da ordem de referência associada à transação."
+      - name: transaction_date
+        description: "Data da transação."
+      - name: transaction_type
+        description: "Tipo de transação (compra, venda, etc.)."
+      - name: quantity
+        description: "Quantidade do produto transacionado."
+      - name: actual_cost
+        description: "Custo real do produto na transação."
+
+  - name: transaction_metrics
+    description: "Modelo contendo métricas agregadas sobre as transações."
+    columns:
+      - name: product_id
+        description: "ID do produto transacionado."
+      - name: total_transactions
+        description: "Número total de transações realizadas para cada produto."
+      - name: total_quantity
+        description: "Quantidade total transacionada por produto."
+      - name: total_cost
+        description: "Custo total de cada produto nas transações."
+      - name: average_cost
+        description: "Custo médio por transação para cada produto."
+      - name: average_cost_per_product
+        description: "Custo médio por unidade de produto, considerando a quantidade transacionada."
+      - name: total_transactions_order
+        description: "Número de transações agrupadas por ordem de referência para cada produto."

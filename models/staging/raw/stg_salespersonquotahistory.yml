@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: salespersonquotahistory
+        description: "Tabela contendo o histórico de cotas de vendas de vendedores."
+        columns:
+          - name: businessentityid
+            description: "Identificador da entidade de negócios."
+            tests:
+              - not_null
+          - name: quotadate
+            description: "Data da cota de vendas."
+          - name: salesquota
+            description: "Valor da cota de vendas."
+          - name: rowguid
+            description: "Identificador único da linha."
+            tests:
+              - unique
+          - name: modifieddate
+            description: "Data da última modificação no registro."

@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw_adventure_works
+    description: "Esquema contendo dados brutos extraídos da fonte AdventureWorks."
+    tables:
+      - name: productmodelproductdescriptionculture
+        description: "Tabela que armazena as descrições de produtos associadas a diferentes culturas."
+        columns:
+          - name: productmodelid
+            description: "ID único do modelo de produto."               
+          - name: productdescriptionid
+            description: "ID único da descrição do produto."
+          - name: cultureid
+            description: "ID da cultura associada à descrição do produto."
+          - name: modifieddate
+            description: "Data da última modificação no registro da descrição do produto."

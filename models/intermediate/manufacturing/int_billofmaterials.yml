@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: int_billofmaterials
+    description: Tabela que relaciona os componentes necessários para a montagem de produtos, incluindo informações sobre medidas, quantidades e níveis hierárquicos dos componentes.
+    columns:
+      - name: bill_of_materials_id
+        description: Identificador único da lista de materiais.
+      - name: product_assembly_id
+        description: Identificador do produto montado a partir dos componentes listados.
+      - name: component_id
+        description: Identificador único do componente na lista de materiais.
+      - name: start_date
+        description: Data de início da validade da lista de materiais.
+      - name: end_date
+        description: Data de término da validade da lista de materiais.
+      - name: unit_measure_code
+        description: Código da unidade de medida associada aos componentes.
+      - name: bom_level
+        description: Nível hierárquico do componente na lista de materiais.
+      - name: per_assembly_qty
+        description: Quantidade de cada componente necessária para montar o produto.
+      - name: name_measure
+        description: Nome da unidade de medida associada aos componentes.
